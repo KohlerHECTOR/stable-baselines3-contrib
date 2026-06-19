@@ -2,6 +2,27 @@
 
 # Changelog
 
+## Release 2.10.0a0 (2026-06-19)
+
+### Breaking Changes:
+
+- Upgraded to Stable-Baselines3 >= 2.10.0a0
+
+### New Features:
+
+- SB3-Contrib types (policies, distributions, buffers, custom layers) are now
+  registered in the safe deserialization allowlist, enabling loading SB3-Contrib
+  saved models with `deserialization_mode="safe"` (the new default)
+
+### Bug Fixes:
+
+### Deprecations:
+
+### Others:
+
+### Documentation:
+
+
 ## Release 2.9.0 (2026-06-15)
 
 ### Breaking Changes:
