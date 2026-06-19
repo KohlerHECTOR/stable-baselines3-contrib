@@ -51,12 +51,33 @@ def _register() -> None:
         CrossQCritic,
         CrossQPolicy,
     )
-    from sb3_contrib.qrdqn.policies import QRDQNPolicy, QuantileNetwork
-    from sb3_contrib.tqc.policies import Actor as TQCActor
-    from sb3_contrib.tqc.policies import Critic as TQCCritic
-    from sb3_contrib.tqc.policies import TQCPolicy
+    from sb3_contrib.qrdqn.policies import (
+        CnnPolicy as QRDQNCnnPolicy,
+    )
+    from sb3_contrib.qrdqn.policies import (
+        MultiInputPolicy as QRDQNMultipInputPolicy,
+    )
+    from sb3_contrib.qrdqn.policies import (
+        QRDQNPolicy,
+        QuantileNetwork,
+    )
+    from sb3_contrib.tqc.policies import (
+        Actor as TQCActor,
+    )
+    from sb3_contrib.tqc.policies import (
+        CnnPolicy as TQCCnnPolicy,
+    )
+    from sb3_contrib.tqc.policies import (
+        Critic as TQCCritic,
+    )
+    from sb3_contrib.tqc.policies import (
+        MultiInputPolicy as TQCMultiInputPolicy,
+    )
+    from sb3_contrib.tqc.policies import (
+        TQCPolicy,
+    )
 
-    contrib_types = [
+    contrib_types: list[type | tuple[type, str]] = [
         # ARS policies
         ARSPolicy,
         ARSLinearPolicy,
@@ -86,6 +107,8 @@ def _register() -> None:
         TQCActor,
         TQCCritic,
         TQCPolicy,
+        TQCCnnPolicy,
+        TQCMultiInputPolicy,
         # CrossQ policies
         CrossQActor,
         CrossQCritic,
@@ -95,6 +118,8 @@ def _register() -> None:
         BatchRenorm1d,
         # QR-DQN policies
         QRDQNPolicy,
+        QRDQNCnnPolicy,
+        QRDQNMultipInputPolicy,
         QuantileNetwork,
     ]
 
